@@ -1,10 +1,10 @@
-const slides = document.querySelectorAll("section div.slides")
+const slides = document.querySelectorAll('section div.slides')
 
 slides.forEach(slide => {
   let current = 0
   let z = 10000000
 
-  const images = slide.querySelectorAll("img")
+  const images = slide.querySelectorAll('img')
 
   images.forEach(image => {
     z = z - 1
@@ -39,7 +39,7 @@ slides.forEach(slide => {
 
 
 
-  slide.addEventListener("click", function () {
+  slide.addEventListener("click", function() {
     z = z - 1
 
     let direction = "150%"
@@ -59,7 +59,7 @@ slides.forEach(slide => {
       .to(currentImage, {
         x: direction,
         rotation: midAngle,
-        rotationY: 20,
+        rotationY: 90,
         scale: 1.1
       })
       .set(currentImage, { zIndex: z })
